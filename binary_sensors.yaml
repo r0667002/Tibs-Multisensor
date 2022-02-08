@@ -1,0 +1,4 @@
+- platform: trend
+  sensors:
+    rotary_encoder_master_bedroom:
+      entity_id: sensor.rotary_encoder_light_switch
