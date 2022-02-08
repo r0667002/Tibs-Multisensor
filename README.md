@@ -1,15 +1,15 @@
 # Tibs-Multisensor
-This repository includes the necessary code and 3D model for the Tibs Multisensor. The sensor is meant to be used with Home Assistant and is created using ESPHome. For now, the 3D model is just a prototype and should definitely be improved.
+This repository includes the necessary code and 3D model for the Tibs Multisensor. The sensor is meant to be **used with Home Assistant** and is created using **ESPHome**. For now, the 3D model is just a prototype and should definitely be improved.
 
 It includes the following components:
 - 4x Capacitive touch button TTP223
 - 1x PIR sensor AM312
-- 1x Rotary encoder KY-040
+- 1x Rotary encoder KY-040 (rotation + push button)
 - 1x Wemos D1 Mini
 
 A possibility would be to add another one like a lux or temperature sensor.
 
-The goal of the project is to make a DIY Light-switch-like control mechanism that can handle up to 18 different actions all packaged in a 85x85x11.8mm box. The code for the automations I use is included here as well, to give you some inspiration.
+The goal of the project is to make a DIY Light-switch-like control mechanism that can **handle up to 18 different actions** all packaged in a 85x85x11.8mm box. The code for the automations I use is included here as well, to give you some inspiration. I also used a [blueprint](https://community.home-assistant.io/t/trigger-different-actions-on-a-single-double-or-double-click-on-a-binary-sensor/255902) so that different actions can run depending on a single, double or long top on the buttons
 
 ## Pinout diagram
 Coming soon. For now it can already be deduced from the ESPHome code. All Vin pins of the sensors are connected to the 3.3V provided by the D1 mini, which itself is powered by a regular 5V adapter.
