@@ -12,7 +12,9 @@ A possibility would be to add another one like a lux or temperature sensor.
 The goal of the project is to make a DIY Light-switch-like control mechanism that can **handle up to 18 different actions** all packaged in a 85x85x11.8mm box. The code for the automations I use is included here as well, to give you some inspiration. I also used a [blueprint](https://community.home-assistant.io/t/trigger-different-actions-on-a-single-double-or-double-click-on-a-binary-sensor/255902) so that different actions can run depending on a single, double or long top on the buttons
 
 ## Pinout diagram
-Coming soon. For now it can already be deduced from the ESPHome code. All Vin pins of the sensors are connected to the 3.3V provided by the D1 mini, which itself is powered by a regular 5V adapter.
+The D1 mini itself is powered by a regular 5V adapter plugged into the wall.
+
+![pinout](https://user-images.githubusercontent.com/45207725/153024034-1c3cdfa6-205f-46db-a399-5608fe2a2122.png)
 
 ### Important!
 Make sure to **connect adjustment pin A on the TTP223 for pin D3**. Otherwise that pin is pulled low and the microcontroller will not boot! The only downside is that the built-in LED on the TTP223 will be on if the button is not pushed. This tends to be visible when using white PLA, so I carefully removed the LED by *sheer brute force*.
