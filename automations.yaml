@@ -312,7 +312,7 @@
   mode: single
 - id: '1644116055199'
   alias: 'Light Switch Replacement: Bot Right'
-  description: ''
+  description: 'Play the news (Flemish, VRT) on the bedroom speaker.'
   trigger:
   - platform: state
     entity_id: binary_sensor.capacitive_touch_bot_right_light_switch
@@ -334,21 +334,9 @@
     - service: script.radio_nieuwsupdate_master_bedroom_no_delay
       data: {}
   mode: single
-- id: '1644116395471'
-  alias: 'Light Switch Replacement: Top Right'
-  description: ''
-  trigger:
-  - platform: state
-    entity_id: binary_sensor.capacitive_touch_top_right_light_switch
-    to: 'on'
-  condition: []
-  action:
-  - service: script.blinds_toggle_open_close
-    data: {}
-  mode: single
 - id: '1644245853485'
   alias: 'Light Switch Replacement: Toggle button rotary endcoder'
-  description: ''
+  description: 'Short press: Switch between influencing the speaker volume and the brightness. Long press: Turn everything in the house off.'
   use_blueprint:
     path: slashback/trigger-different-actions-on-a-single-double-or-double-click-on-a-binary-sensor.yaml
     input:
