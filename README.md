@@ -27,4 +27,5 @@ For more info about the D1 mini's pinout, look [here](https://randomnerdtutorial
 
 ## Credits
 The [3D model](https://www.thingiverse.com/thing:1283248) is a remix from Thingiverse by user hexxter.
+
 The [blueprint](https://community.home-assistant.io/t/trigger-different-actions-on-a-single-double-or-double-click-on-a-binary-sensor/255902) used for the short, long and double click is by user slashback.
