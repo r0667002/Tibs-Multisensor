@@ -9,7 +9,7 @@ It includes the following components:
 
 A possibility would be to add another one like a lux or temperature sensor.
 
-The goal of the project is to make a DIY Light-switch-like control mechanism that can **handle up to 18 different actions** all packaged in a 85x85x11.8mm box. The code for the automations I use is included here as well, to give you some inspiration. I also used a [blueprint](https://community.home-assistant.io/t/trigger-different-actions-on-a-single-double-or-double-click-on-a-binary-sensor/255902) so that different actions can run depending on a single, double or long top on the buttons
+The goal of the project is to make a DIY Light-switch-like control mechanism that can **handle up to 18 different actions** all packaged in a 85x85x11.8mm box. The code for the automations I use is included here as well, to give you some inspiration. I also used a [blueprint](https://community.home-assistant.io/t/trigger-different-actions-on-a-single-double-or-double-click-on-a-binary-sensor/255902) so that different actions can run depending on a single, double or long click on the buttons
 
 ## Pinout diagram
 The D1 mini itself is powered by a regular 5V adapter plugged into the wall.
@@ -24,3 +24,7 @@ For more info about the D1 mini's pinout, look [here](https://randomnerdtutorial
 ## Screenshots
 ![Front](https://user-images.githubusercontent.com/45207725/152898846-411205eb-df26-4e77-a914-7243cad07b2b.jpg)
 ![Back](https://user-images.githubusercontent.com/45207725/152899007-e0f0dddb-7d1b-41e9-b92a-ba8064573e5d.jpg)
+
+## Credits
+The [3D model](https://www.thingiverse.com/thing:1283248) is a remix from Thingiverse by user hexxter.
+The [blueprint](https://community.home-assistant.io/t/trigger-different-actions-on-a-single-double-or-double-click-on-a-binary-sensor/255902) used for the short, long and double click is by user slashback.
