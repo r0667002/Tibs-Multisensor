@@ -1,0 +1,73 @@
+esphome:
+  name: light-switch-replacement
+  platform: ESP8266
+  board: d1_mini_lite
+
+wifi:
+  ssid: !secret wifi_ssid_upstairs
+  password: !secret wifi_password
+  manual_ip:
+    static_ip: 192.168.0.xxx # edit
+    gateway: 192.168.0.1
+    subnet: 255.255.255.0
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "Light-Switch-Replacement"
+    password: !secret ap_password
+
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+  password: !secret ap_password
+  
+ota:
+  password: !secret ap_password
+  
+captive_portal:
+
+sensor:
+  - platform: rotary_encoder
+    name: "Rotary Encoder - Light Switch"
+    pin_a: D6
+    pin_b: D5
+
+binary_sensor:
+  - platform: gpio # Rotary encoder
+    pin:
+      number: D4
+      mode: INPUT_PULLUP
+      inverted: true
+    name: "Toggle Button - Light Switch"
+  - platform: gpio # TTP223
+    pin:
+      number: D8 #Can not be HIGH at boot, so don't connect A on the TTP223!
+      mode: INPUT_PULLUP
+      # inverted: true
+    name: "Capacitive Touch - Bot Left - Light Switch"
+  - platform: gpio # TTP223
+    pin:
+      number: D3 #Can not be LOW at boot, so CONNECT bridge A on the TTP223!
+      mode: INPUT_PULLUP
+      inverted: true
+    name: "Capacitive Touch - Top Left - Light Switch"
+  - platform: gpio # TTP223
+    pin:
+      number: D2
+      mode: INPUT_PULLUP
+    name: "Capacitive Touch - Bot Right - Light Switch"
+  - platform: gpio # TTP223
+    pin:
+      number: D1
+      mode: INPUT_PULLUP
+      inverted: true
+    name: "Capacitive Touch - Top Right - Light Switch"
+  - platform: gpio # PIR
+    pin:
+      number: D7
+      # mode: INPUT_PULLUP
+    name: "PIR Sensor Tibo's Room"
+    device_class: motion
